@@ -3,7 +3,11 @@ import routes from './lib/routes'
 
 export default class App extends Router.App {
   static getFonts() {
-    return [{ family: 'Regular', url: Utils.asset('fonts/Roboto-Regular.ttf') }]
+    return [
+      { family: 'Regular', url: Utils.asset('fonts/Poppins-Regular.ttf') },
+      { family: 'Bold', url: Utils.asset('fonts/Poppins-Bold.ttf') },
+      { family: 'Black', url: Utils.asset('fonts/Poppins-Black.ttf') },
+    ]
   }
 
   _setup() {

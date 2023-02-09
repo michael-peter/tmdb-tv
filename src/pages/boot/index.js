@@ -10,19 +10,19 @@ export class Boot extends Lightning.Component {
 
       Title: {
         x: 960,
-        y: 40,
+        y: 80,
         mount: 0.5,
         text: {
           text: 'Welcome to The MovieDB',
           fontSize: 72,
-          fontWeight: 700,
+          fontFace: 'Black',
         },
       },
 
       Logo: {
         x: 960,
         y: 540,
-        mountX: 0.5,
+        mount: 0.5,
         src: Utils.asset('images/logo.png'),
       },
 
@@ -33,7 +33,7 @@ export class Boot extends Lightning.Component {
         text: {
           text: '[Press any key to continue]',
           fontSize: 36,
-          fontWeight: 500,
+          fontFace: 'Bold',
         },
       },
     }
