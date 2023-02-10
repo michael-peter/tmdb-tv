@@ -1,6 +1,6 @@
 {
-  "name": "router",
-  "description": "router",
+  "name": "tmdb-tv",
+  "description": "A simple TV App for listing popular movies on The MovieDB",
   "dependencies": {
     "@lightningjs/sdk": "^5.2.0",
     "@lightningjs/ui": "^1.3.7",
