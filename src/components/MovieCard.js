@@ -2,7 +2,15 @@ import { Lightning, Router } from '@lightningjs/sdk'
 
 export class MovieCard extends Lightning.Component {
   _handleEnter() {
-    Router.navigate(`movies/${this.movieId}`)
+    Router.navigate(`movies/${this.movieId}`, {
+      title: this.title,
+      overview: this.overview,
+      imageUrl: this.imageUrl,
+      releaseDate: this.releaseDate,
+      popularity: this.popularity.toString(),
+      averageVote: this.averageVote.toString(),
+      keepAlive: true,
+    })
   }
 
   static _template() {

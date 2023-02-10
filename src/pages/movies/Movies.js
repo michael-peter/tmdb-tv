@@ -19,6 +19,9 @@ export class Movies extends Lightning.Component {
         movieId: movie.id,
         title: movie.title,
         overview: movie.overview,
+        releaseDate: movie.release_date,
+        popularity: movie.popularity,
+        averageVote: movie.vote_average,
         type: MovieCard,
       }
     })
@@ -66,10 +69,10 @@ export class Movies extends Lightning.Component {
     return [
       class Container extends this {
         _handleUp() {
-          if (this.index - 4 > 1) {
-            this.index = (this.index % 4) - 1
-          } else {
+          if (this.index - 4 < 0) {
             this.index = 0
+          } else {
+            this.index -= 4
           }
         }
 
@@ -77,7 +80,7 @@ export class Movies extends Lightning.Component {
           if (this.index + 4 > this.moviesCount - 1) {
             this.index = this.moviesCount - 1
           } else {
-            this.index -= 5
+            this.index += 4
           }
         }
 
@@ -95,7 +98,6 @@ export class Movies extends Lightning.Component {
           } else {
             this.index -= 1
           }
-          this.repositionContainer
         }
 
         _getFocused() {
